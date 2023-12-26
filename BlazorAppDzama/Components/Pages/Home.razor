@@ -1,0 +1,104 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<RadzenStack Orientation="Orientation.Vertical" Gap="0" Style="background-color:#0d0f0f">
+
+    <RadzenStack class="position-relative w-100 h-100" Style="margin:-9rem 0 0 0;">
+        <RadzenImage class="img-fluid " Path="/images/home.png" />
+
+        <RadzenStack class="h-100 position-absolute start-0 bg-black bg-opacity-50 px-5" Style="width:39%;" Gap="0" Orientation="Orientation.Vertical" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.Center">
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+                <RadzenText class="text-white fw-bold mb-0" TextStyle="TextStyle.DisplayH3" Text="Where" />
+                <RadzenText class="text-white fw-bold mb-0" TextStyle="TextStyle.DisplayH3" Text="Innovation" />
+            </RadzenStack>
+
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+                <RadzenText class="text-white fw-bold px-1 border border-5 rounded-3 border-warning border-opacity-0" TextStyle="TextStyle.DisplayH3" Text="Meets" />
+                <RadzenText class="text-white fw-bold px-1 border border-5 rounded-3 border-warning border-opacity-75" TextStyle="TextStyle.DisplayH3" Text="Design" />
+            </RadzenStack>
+
+            <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
+                <RadzenText class="text-white" TextStyle="TextStyle.Body1" Text="We seamlessly integrate cutting-edge ideas with sleek design principles to deliver spaces that not ony captivate but also function at the forefront of modernity." />
+            </RadzenStack>
+
+            <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Text">
+                <RadzenRow Gap="1rem" >
+                    <RadzenText class="text-white fw-bolder h6" Text="See More" />
+                    <i class="fa-solid fa-angles-right text-warning h6 mt-1"></i>
+                 </RadzenRow>
+            </RadzenButton>
+
+        </RadzenStack>
+
+        <RadzenStack class="h-100 position-absolute end-0 bg-black bg-opacity-25 px-5" Style="width:61%;" Orientation="Orientation.Vertical" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.Center" />
+    </RadzenStack>
+
+    <RadzenStack class="w-100 bg-white" Style="height:3rem;margin:-3rem 0 3.5rem 0;z-index:1;" />
+
+    <RadzenStack class="position-relative w-100 h-100">
+
+        <RadzenRow class="mb-3" Gap="0" >
+            <RadzenColumn class="position-absolute" Style="z-index:4;" Size="3" Offset="1" >
+                <RadzenStack Style="margin-right:-2rem;" Orientation="Orientation.Vertical" Gap="1rem">
+                    <RadzenStack Orientation="Orientation.Horizontal" Gap="0">
+                        <RadzenText class="text-white fw-bold px-1 border border-5 rounded-3 border-warning border-opacity-75" TextStyle="TextStyle.DisplayH6" Text="About" />
+                        <RadzenText class="text-white fw-bold px-1 border border-5 rounded-3 border-warning border-opacity-0" TextStyle="TextStyle.DisplayH6" Text="Us" />
+                    </RadzenStack>
+                    <div class="ratio" style="--bs-aspect-ratio:90%;">
+                        <RadzenImage class="img-fluid bg-black p-2 border border-1 rounded-3 border-white" Path="/images/about-us.png"
+                                     Style="object-fit:cover;object-position:50% 100%;" />
+                    </div>
+                    <RadzenRow Gap="0">
+                        <RadzenColumn class="position-absolute text-center" Size="6" Offset="2">
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0">
+                                <RadzenText class="text-white fw-bold mb-1" TextStyle="TextStyle.Body1" Text="Mariam Dzamashvili" />
+                                <RadzenText class="text-warning fw-bold" TextStyle="TextStyle.Body1" Text="Interior Designer" />
+                            </RadzenStack>
+                        </RadzenColumn>
+                    </RadzenRow>
+                </RadzenStack>
+            </RadzenColumn>
+
+            <RadzenColumn class="position-relative px-5" Size="8" Offset="3" Style="z-index:3;" >
+                <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                    <div class="ratio" style="--bs-aspect-ratio:56%;">
+                        <RadzenImage class="img-fluid rounded-3" Path="/images/home2.png" />
+                        <RadzenRow class="position-absolute" Gap="0">
+                            <RadzenColumn class="border-start border-end border-black border-3" Size="3" />
+                            <RadzenColumn class="border-start border-end border-black border-3" Size="3" />
+                            <RadzenColumn class="border-start border-end border-black border-3" Size="3" />
+                            <RadzenColumn class="border-start border-end border-black border-3" Size="3" />
+                        </RadzenRow>
+                    </div>
+
+                    <RadzenRow Gap="0">
+                        <RadzenColumn Size="9" Offset="3">
+                            <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
+                                <RadzenText class="text-white" TextStyle="TextStyle.Subtitle1" Text="Welcome to TeamFour, where innovation and design converge to transform spaces into personalized works of art." />
+                                <RadzenText class="text-white" TextStyle="TextStyle.Subtitle1" Text="At TeamFour, we believe in the power of thoughtful design to enhance lives." />
+                                <RadzenText class="text-white" TextStyle="TextStyle.Subtitle1" Text="With a passion of creativity and a dedication to excellence, our team collaborates seamlessly to craft unique, modern and functional interiors that resonate with your lifestyle." />
+                            </RadzenStack>
+                        </RadzenColumn>
+                    </RadzenRow>
+                </RadzenStack>
+            </RadzenColumn>
+
+            
+
+        </RadzenRow>
+        <RadzenRow class="position-absolute w-100 h-100 pe-3" Style="margin-top:-6.5rem;z-index:2" Gap="0">
+            <RadzenColumn class="border-bottom border-end border-warning border-4" Size="4">
+            </RadzenColumn>
+        </RadzenRow>
+
+        <RadzenRow class="position-absolute w-100 top-0 bottom-0" Style="margin-top:-2rem;z-index:2">
+            <div style="width:39.5%" />
+            <RadzenColumn class="border-start border-top border-bottom border-warning border-4" >
+            </RadzenColumn>
+        </RadzenRow>
+
+    </RadzenStack>
+
+</RadzenStack>
+
