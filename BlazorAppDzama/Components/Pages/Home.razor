@@ -1,11 +1,15 @@
 ﻿@page "/"
 
+@rendermode InteractiveServer
+
 <PageTitle>Home</PageTitle>
 
 <RadzenStack Orientation="Orientation.Vertical" Gap="0" Style="background-color:#0d0f0f">
 
     <RadzenStack class="position-relative w-100 h-100" Style="margin:-9rem 0 0 0;">
-        <RadzenImage class="img-fluid " Path="/images/home.png" />
+        <div class="ratio" style="--bs-aspect-ratio:60%;">
+            <RadzenImage class="img-fluid" Path="@_carousel[_carouselIndex]" />
+        </div>
 
         <RadzenStack class="h-100 position-absolute start-0 bg-black bg-opacity-50 px-5" Style="width:39%;" Gap="0" Orientation="Orientation.Vertical" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.Center">
             <RadzenStack Orientation="Orientation.Horizontal" Gap="1rem">
@@ -22,13 +26,17 @@
                 <RadzenText class="text-white" TextStyle="TextStyle.Body1" Text="We seamlessly integrate cutting-edge ideas with sleek design principles to deliver spaces that not ony captivate but also function at the forefront of modernity." />
             </RadzenStack>
 
-            <RadzenButton ButtonStyle="ButtonStyle.Light" Variant="Variant.Text">
-                <RadzenRow Gap="1rem" >
-                    <RadzenText class="text-white fw-bolder h6" Text="See More" />
-                    <i class="fa-solid fa-angles-right text-warning h6 mt-1"></i>
-                 </RadzenRow>
-            </RadzenButton>
+            <RadzenStack class="w-75" Orientation="Orientation.Horizontal" JustifyContent="JustifyContent.End">
+                <RadzenButton dir="rtl" Style="z-index:2;" Icon="keyboard_double_arrow_right" IconColor="@Colors.Warning" Text="See More" ButtonStyle="ButtonStyle.Light" Variant="Variant.Text" />
+            </RadzenStack>
+            
 
+        </RadzenStack>
+
+        <RadzenStack class="position-absolute end-0 bottom-0" Style="width:13%;height:28%;z-index:1;" Orientation="Orientation.Vertical" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.Start" >
+            <RadzenButton Click="arg => _carouselIndex = ++_carouselIndex % _carousel.Length" ButtonStyle="ButtonStyle.Light" Variant="Variant.Text">
+                <i class="fa-solid fa-ellipsis text-black" style="width:30px;height:30px;"></i>
+            </RadzenButton>
         </RadzenStack>
 
         <RadzenStack class="h-100 position-absolute end-0 bg-black bg-opacity-25 px-5" Style="width:61%;" Orientation="Orientation.Vertical" AlignItems="AlignItems.Start" JustifyContent="JustifyContent.Center" />
@@ -36,7 +44,7 @@
 
     <RadzenStack class="w-100 bg-white" Style="height:3rem;margin:-3rem 0 3.5rem 0;z-index:1;" />
 
-    <RadzenStack class="position-relative w-100 h-100">
+    <RadzenStack id="about-us" class="position-relative w-100 h-100">
 
         <RadzenRow class="mb-3" Gap="0" >
             <RadzenColumn class="position-absolute" Style="z-index:4;" Size="3" Offset="1" >
@@ -63,7 +71,7 @@
             <RadzenColumn class="position-relative px-5" Size="8" Offset="3" Style="z-index:3;" >
                 <RadzenStack Orientation="Orientation.Vertical" Gap="0.5rem">
                     <div class="ratio" style="--bs-aspect-ratio:56%;">
-                        <RadzenImage class="img-fluid rounded-3" Path="/images/home2.png" />
+                        <RadzenImage class="img-fluid rounded-3" Path="/images/about-us2.png" />
                         <RadzenRow class="position-absolute" Gap="0">
                             <RadzenColumn class="border-start border-end border-black border-3" Size="3" />
                             <RadzenColumn class="border-start border-end border-black border-3" Size="3" />
@@ -102,3 +110,8 @@
 
 </RadzenStack>
 
+@code {
+    private string[] _carousel = ["/images/homecarousel0.png", "/images/homecarousel1.png", "/images/homecarousel2.png"];
+    private int _carouselIndex;
+
+}

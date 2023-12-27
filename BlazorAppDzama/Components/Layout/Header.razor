@@ -1,30 +1,32 @@
-﻿
-<RadzenStack class="w-100 rz-text-align-center" Orientation="Orientation.Horizontal" Gap="0">
+﻿@rendermode InteractiveServer
+
+
+<RadzenStack class="w-100 rz-text-align-center site-header" Orientation="Orientation.Horizontal" Gap="0">
     <RadzenColumn Style="width:40%;">
-        <RadzenLink class="text-white fw-bolder h6" Text="Projects" />
+        <RadzenLink class="text-white fw-bolder h6 mb-0" Text="Projects" />
     </RadzenColumn>
 
     <RadzenColumn Style="width:55%;">
         <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceAround" Wrap="FlexWrap.NoWrap" Gap="1rem">
-            <RadzenStack Orientation="Orientation.Horizontal">
-                <RadzenLink class="text-white fw-bolder h6" Text="About Us" />
-                <RadzenLink class="text-white fw-bolder h6" Text="Reviews" />
-                <RadzenLink class="text-white fw-bolder h6" Text="Gallery" />
-                <RadzenLink class="text-white fw-bolder h6" Text="Blog" />
-                <RadzenLink class="text-white fw-bolder h6" Text="Contact" />
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center">
+                <RadzenLink class="text-white fw-bolder h6 mb-0 link-underline-warning" Path="#about-us" Text="About Us" />
+                <RadzenLink class="text-white fw-bolder h6 mb-0" Path="#" Text="Reviews" />
+                <RadzenLink class="text-white fw-bolder h6 mb-0" Path="#" Text="Gallery" />
+                <RadzenLink class="text-white fw-bolder h6 mb-0" Path="#" Text="Blog" />
+                <RadzenLink class="text-white fw-bolder h6 mb-0" Path="#" Text="Contact" />
             </RadzenStack>
-            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem">
-                <RadzenLink Style="color:white;">
-                    <i class="fa-brands fa-facebook-f h5"></i>
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem">
+                <RadzenLink >
+                    <i class="fa-brands fa-facebook-f text-white" style="width:14;height:14"></i>
                 </RadzenLink>
-                <RadzenLink Style="color:white;">
-                    <i class="fa-brands fa-instagram h5"></i>
+                <RadzenLink >
+                    <i class="fa-brands fa-instagram text-white" style="width:14;height:14"></i>
                 </RadzenLink>
             </RadzenStack>
-            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.25rem">
-                <RadzenLink class="text-white fw-bolder h6" Text="En" />
-                <RadzenText class="text-white fw-bolder h6" Text="|" />
-                <RadzenLink class="text-white fw-bolder h6" Text="Ge" />
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.25rem">
+                <RadzenLink class="text-white fw-bolder h6 mb-0" Text="En" />
+                <RadzenText class="text-white fw-bolder h6 mb-0" Text="|" />
+                <RadzenLink class="text-white fw-bolder h6 mb-0" Text="Ge" />
             </RadzenStack>
         </RadzenStack>
 
